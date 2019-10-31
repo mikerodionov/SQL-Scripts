@@ -1,3 +1,13 @@
+/*
+Author: sqiller
+Description: Searches for a value to replace in all columns from all tables
+USE: EXEC dbo.usp_Update_AllTAbles 'work', 'sqiller', 1
+@search = Value to look for Replace
+@newvalue = the value that will replace @search
+@Test = If set to 1, it will only PRINT the UPDATE statement instead of EXEC, useful to see
+        what is going to update before.
+*/
+
 CREATE PROCEDURE dbo.usp_Update_AllTAbles(
 @search varchar(100),
 @newvalue varchar(100),
